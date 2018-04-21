@@ -33,6 +33,7 @@ public class DefaultReplyService implements ReplyService
         if(reply.getId() < 1)
         {
             discussion.getSubscribedUsers().add(reply.getUser());
+            System.out.println("add sth");
             reply.setCreated(Instant.now());
             this.replyRepository.add(reply);
 

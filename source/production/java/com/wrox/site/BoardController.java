@@ -28,7 +28,8 @@ public class BoardController
     @RequestMapping(value = "create", method = RequestMethod.GET)
     public String createDiscussion(Map<String, Object> model)
     {
-        model.put("discussionForm", new DiscussionForm());
+        System.out.println("add sth. else");
+    		model.put("discussionForm", new DiscussionForm());
         return "discussion/create";
     }
 
