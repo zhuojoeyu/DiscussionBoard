@@ -20,7 +20,8 @@ public class BoardController
     @RequestMapping(value = {"", "list"}, method = RequestMethod.GET)
     public String listDiscussions(Map<String, Object> model)
     {
-        model.put("discussions", this.discussionService.getAllDiscussions());
+        System.out.println("add a line to test");
+    		model.put("discussions", this.discussionService.getAllDiscussions());
         return "discussion/list";
     }
 
