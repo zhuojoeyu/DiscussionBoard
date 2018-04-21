@@ -27,7 +27,8 @@ public class DiscussionController
         Discussion discussion = this.discussionService.getDiscussion(id);
         if(discussion != null)
         {
-            model.put("discussion", discussion);
+            System.out.println("print sth.");
+        		model.put("discussion", discussion);
             model.put("replies", this.replyService.getRepliesForDiscussion(id));
             model.put("replyForm", new ReplyForm());
             return "discussion/view";
